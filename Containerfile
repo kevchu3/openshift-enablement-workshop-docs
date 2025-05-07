@@ -13,7 +13,7 @@ ENV NPM_CONFIG_PREFIX=/opt/app-root/src/.npm-global
 USER 1001
 
 RUN npm install && \
-    npx antora antora-playbook.yml --stacktrace --fetch --noproxy '*'
+    npx antora antora-playbook.yml --stacktrace --fetch
 
 FROM registry.redhat.io/rhel9/nodejs-18-minimal AS runner
 
